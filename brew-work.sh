@@ -17,6 +17,8 @@ brew install go
 
 # casks
 brew install --cask spotify
+
+brew tap dracula/install
 brew install --cask dracula-terminal
 brew install --cask google-chrome
 brew install --cask visual-studio-code
