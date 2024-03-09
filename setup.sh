@@ -14,10 +14,10 @@ echo "What type of machine is this? (work or personal)"
 read machineType
 if [ $machineType = "work" ]
 then
-  source ./brew-work.sh
+  source ./scripts/brew-work.sh
 elif [ $machineType = "personal" ]
 then
-  source ./brew-personal.sh
+  source ./scripts/brew-personal.sh
 else
   echo "Invalid machine type"
 fi
