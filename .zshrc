@@ -4,6 +4,7 @@ export PATH=/opt/homebrew/bin:$PATH
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH:$GOBIN
+DEFAULT_USER=burning
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
