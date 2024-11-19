@@ -17,6 +17,9 @@ brew install tmux
 # Install github cli
 brew install gh
 
+# Install aws cli
+brew install awscli
+
 # Language packages
 brew install nvm
 mkdir ~/.nvm
