@@ -13,6 +13,7 @@ brew install gh
 
 # Language packages
 brew install nvm
+mkdir ~/.nvm
 brew install go
 
 # casks
