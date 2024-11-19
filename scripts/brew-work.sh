@@ -8,6 +8,12 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+# Install GNU stow
+brew install stow
+
+# Install tmux
+brew install tmux
+
 # Install github cli
 brew install gh
 
