@@ -11,9 +11,13 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export NODE_EXTRA_CA_CERTS="$HOME/Desktop/boneco.pem"
 
- # This loads nvm
+# This loads nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# ---- Eza (better ls) -----
+
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,3 +118,6 @@ alias dev="npm run dev"
 alias build="npm run build"
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/Users/burning/.bun/_bun" ] && source "/Users/burning/.bun/_bun"
