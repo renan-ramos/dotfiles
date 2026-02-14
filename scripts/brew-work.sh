@@ -23,6 +23,7 @@ brew install awscli
 # Language packages
 brew install nvm
 mkdir ~/.nvm
+brew install fnm
 brew install go
 
 # casks
