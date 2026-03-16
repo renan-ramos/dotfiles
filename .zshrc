@@ -56,7 +56,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -120,7 +120,22 @@ alias build="npm run build"
 # ---- Eza (better ls) -----
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Remove the existing Oh My Zsh alias first
+unalias gwt 2>/dev/null
+
+# ---- Git Worktree ------
+gwt() {
+  if [ -d ".bare" ]; then
+    # If .bare exists, use it as the git directory
+    git --git-dir=.bare worktree "$@"
+  else
+    # Otherwise, just run standard git worktree
+    git worktree "$@"
+  fi
+}
+
+# nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
 
 # bun completions
 [ -s "/Users/burning/.bun/_bun" ] && source "/Users/burning/.bun/_bun"
